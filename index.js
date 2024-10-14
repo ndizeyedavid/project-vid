@@ -39,7 +39,7 @@ app.get('/', (req, res)=>{
 app.get('/data', (req, res)=>{
     const sql = "SELECT * FROM monitoring ORDER BY id DESC";
     db.query(sql, (err, result)=>{
-        if (err) return res.json({error: "Failed to fetch monitoring data"});
+        if (err) return res.json({error: "Failed to fetch monitoring data", full_error: err.message});
 
         res.json(result);
     })
