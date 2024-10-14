@@ -1,0 +1,8 @@
+node_modules/*
+/help.md
+/tst.js
+/.env
+/database.sql
+send-data.php
+connect.php
+remote.php
